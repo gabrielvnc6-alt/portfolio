@@ -52,7 +52,7 @@ function WrittenCard({
         &ldquo;{item.quote}&rdquo;
       </p>
       <div className="flex items-center gap-3">
-        <div className={`w-10 h-10 rounded-full ${avatarColor(item.name)} flex items-center justify-center font-semibold text-sm`}>
+        <div className={`w-10 h-10 rounded-full ${item.avatarColor ?? avatarColor(item.name)} flex items-center justify-center font-semibold text-sm`}>
           {item.name
             .split(" ")
             .map((n) => n[0])

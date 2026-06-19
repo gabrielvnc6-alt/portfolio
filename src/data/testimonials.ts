@@ -5,6 +5,8 @@ export interface WrittenTestimonial {
   role: string;
   quote: string;
   avatar?: string;
+  /** Optional override for the avatar color (Tailwind classes). Falls back to a name-based color. */
+  avatarColor?: string;
 }
 
 export interface ScreenshotTestimonial {
@@ -49,5 +51,23 @@ export const testimonials: Testimonial[] = [
     role: "Repeat client — Germany",
     quote:
       "Communication was great and the videos came out really well edited. Definitely worth the money!",
+  },
+  {
+    type: "written",
+    id: "w5",
+    name: "marcusdev",
+    role: "Content creator — UK",
+    avatarColor: "bg-emerald-500/20 text-emerald-300",
+    quote:
+      "Fast turnaround and the edits hit exactly the vibe I was going for. The captions and pacing made my Reels feel way more professional. Will be ordering again.",
+  },
+  {
+    type: "written",
+    id: "w6",
+    name: "sofiacreates",
+    role: "Brand owner — Spain",
+    avatarColor: "bg-violet-500/20 text-violet-300",
+    quote:
+      "Super easy to work with and really understood my brand. My TikToks have never looked this clean. Highly recommend for anyone serious about short-form content.",
   },
 ];

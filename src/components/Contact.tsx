@@ -4,14 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState, type FormEvent } from "react";
 import { Send, MapPin } from "lucide-react";
 
-function TikTokIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.97a8.24 8.24 0 0 0 4.76 1.51V7.03a4.83 4.83 0 0 1-1-.34Z" />
-    </svg>
-  );
-}
-
 const projectTypes = [
   "Short-Form Video (TikTok/Reels)",
   "YouTube Long-Form",
@@ -155,40 +147,13 @@ export default function Contact() {
         >
           <div className="flex items-center gap-5">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/gabriel1carvalhoo"
               target="_blank"
               rel="noopener noreferrer"
               className="w-11 h-11 rounded-full bg-card border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent/30 transition-all duration-200"
               aria-label="Instagram"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-            </a>
-            <a
-              href="https://tiktok.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-card border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent/30 transition-all duration-200"
-              aria-label="TikTok"
-            >
-              <TikTokIcon className="w-[18px] h-[18px]" />
-            </a>
-            <a
-              href="https://fiverr.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-card border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent/30 transition-all duration-200 text-xs font-bold"
-              aria-label="Fiverr"
-            >
-              F
-            </a>
-            <a
-              href="https://upwork.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-card border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent/30 transition-all duration-200 text-xs font-bold"
-              aria-label="Upwork"
-            >
-              U
             </a>
           </div>
           <p className="flex items-center gap-2 text-muted text-sm">
