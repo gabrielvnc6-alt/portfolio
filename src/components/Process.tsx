@@ -32,7 +32,7 @@ export default function Process() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="py-24 md:py-32 border-y border-border">
+    <section className="py-12 md:py-16 border-y border-border">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
