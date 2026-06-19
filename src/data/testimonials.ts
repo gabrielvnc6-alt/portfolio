@@ -21,69 +21,33 @@ export const testimonials: Testimonial[] = [
   {
     type: "written",
     id: "w1",
-    name: "Alex Turner",
-    role: "YouTuber — 1.2M subscribers",
+    name: "eduardosmartins",
+    role: "Fiverr client — Portugal",
     quote:
-      "Gabriel transformed my channel. My retention rate went from 35% to 58% in two months. He doesn't just edit — he understands what keeps people watching.",
-  },
-  {
-    type: "screenshot",
-    id: "s1",
-    imageSrc: "/testimonials/review-1.png",
-    platform: "Fiverr",
-    alt: "5-star Fiverr review praising fast turnaround and creative edits",
+      "Really happy with this service. The videos came out clean, engaging, and actually feel like content that can perform well — not just basic edits. You can tell there's real attention to pacing, captions, and keeping the viewer hooked. Communication was smooth and delivery was on point.",
   },
   {
     type: "written",
     id: "w2",
-    name: "Sophia Chen",
-    role: "Brand Owner — Glow Skincare",
+    name: "fannydcnh",
+    role: "Fiverr client — Portugal",
     quote:
-      "We needed TikTok content that actually converted. Gabriel delivered 12 videos in a week and three of them went viral. Our ROAS tripled.",
+      "Outstanding experience from start to finish! Gabriel understood my requirements perfectly, and delivered beyond my expectations. Great communication, fast delivery, and excellent quality. Highly recommended!",
   },
   {
     type: "written",
     id: "w3",
-    name: "Marcus Williams",
-    role: "Agency Creative Director",
+    name: "jirkalange",
+    role: "Repeat client — Germany",
     quote:
-      "I've worked with dozens of editors. Gabriel is the only one I don't have to micromanage. He nails the brief on the first pass, every time.",
-  },
-  {
-    type: "screenshot",
-    id: "s2",
-    imageSrc: "/testimonials/review-2.png",
-    platform: "Upwork",
-    alt: "Top-rated review on Upwork highlighting professional communication",
+      "honestly amazing every single time. I've hired Gabriel again and again because he always delivers. For this project he took my short-form content and made it look so much better for TikTok, Instagram Reels and YouTube Shorts. Better pacing, great color correction, clean audio, awesome captions.",
   },
   {
     type: "written",
     id: "w4",
-    name: "Jake Morrison",
-    role: "Podcast Host — The Daily Grind",
+    name: "jirkalange",
+    role: "Repeat client — Germany",
     quote:
-      "Gabriel turned 2-hour podcast recordings into punchy 60-second clips that exploded on Instagram. 4M views in the first month.",
-  },
-  {
-    type: "screenshot",
-    id: "s3",
-    imageSrc: "/testimonials/review-3.png",
-    platform: "Instagram DM",
-    alt: "Client message thanking Gabriel for exceeding expectations",
-  },
-  {
-    type: "written",
-    id: "w5",
-    name: "Priya Patel",
-    role: "Fitness Creator — 800K followers",
-    quote:
-      "He gets the fitness niche. The pacing, the music, the transitions — everything feels premium. My audience notices the difference.",
-  },
-  {
-    type: "screenshot",
-    id: "s4",
-    imageSrc: "/testimonials/review-4.png",
-    platform: "Fiverr",
-    alt: "Repeat client review mentioning 5th order and continued satisfaction",
+      "Communication was great and the videos came out really well edited. Definitely worth the money!",
   },
 ];
