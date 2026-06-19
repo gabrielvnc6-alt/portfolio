@@ -30,12 +30,12 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "3",
-    title: "Viral TikTok Series",
+    title: "Street Portrait Surprise",
     category: "tiktok",
     videoSrc: "/videos/video-3.mp4",
     posterSrc: "/posters/video-3-poster.jpg",
     description:
-      "A 5-part TikTok series for a lifestyle brand — 8M total views, 120K new followers.",
+      "Feel-good street content for @portrasdoretrato1 — surprising people in São Paulo with framed portraits. Punchy vertical edit with captions and clean pacing.",
   },
   {
     id: "4",
@@ -66,12 +66,12 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: "7",
-    title: "Fashion Brand Campaign",
+    title: "Strangers React to Their Portrait",
     category: "tiktok",
     videoSrc: "/videos/video-7.mp4",
     posterSrc: "/posters/video-7-poster.jpg",
     description:
-      "Campaign launch content that drove 3x ROAS for a DTC fashion label.",
+      "Human-interest TikTok for @portrasdoretrato1 capturing genuine reactions on the streets of São Paulo. Vertical edit with subtitles, sound design and scroll-stopping cuts.",
   },
   {
     id: "8",
