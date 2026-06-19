@@ -82,6 +82,15 @@ export const portfolioItems: PortfolioItem[] = [
     description:
       "High-paced gaming montage with custom motion graphics and sound design.",
   },
+  {
+    id: "9",
+    title: "Airbnb Property Tour",
+    category: "reels",
+    videoSrc: "/videos/video-9.mp4",
+    posterSrc: "/posters/video-9-poster.jpg",
+    description:
+      "Cinematic Airbnb listing tour for a property in Viana do Castelo, Portugal — smooth transitions, elegant titles, and warm grading that make the space feel like home.",
+  },
 ];
 
 export const categories: { label: string; value: Category }[] = [
