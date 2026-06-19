@@ -36,7 +36,7 @@ function VideoCard({
       <div
         className={`relative overflow-hidden ${
           item.category === "tiktok" || item.category === "reels"
-            ? "aspect-[9/16]"
+            ? "aspect-[4/5]"
             : "aspect-video"
         }`}
       >
