@@ -1,4 +1,4 @@
-export type Category = "all" | "youtube" | "tiktok" | "reels" | "longform";
+export type Category = "all" | "tiktok" | "instagram";
 
 export interface PortfolioItem {
   id: string;
@@ -31,7 +31,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     id: "9",
     title: "Airbnb Property Tour",
-    category: "reels",
+    category: "instagram",
     videoSrc: "/videos/video-9.mp4",
     posterSrc: "/posters/video-9-poster.jpg",
     description:
@@ -42,5 +42,5 @@ export const portfolioItems: PortfolioItem[] = [
 export const categories: { label: string; value: Category }[] = [
   { label: "All", value: "all" },
   { label: "TikTok", value: "tiktok" },
-  { label: "Reels", value: "reels" },
+  { label: "Instagram", value: "instagram" },
 ];

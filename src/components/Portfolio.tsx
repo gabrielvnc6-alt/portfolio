@@ -134,7 +134,7 @@ export default function Portfolio() {
 
   return (
     <>
-      <section id="portfolio" className="py-24 md:py-32">
+      <section id="portfolio" className="pt-12 md:pt-16 pb-24 md:pb-32">
         <div className="max-w-7xl mx-auto px-6" ref={ref}>
           <motion.div
             initial={{ opacity: 0, y: 30 }}
