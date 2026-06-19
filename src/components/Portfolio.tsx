@@ -33,13 +33,7 @@ function VideoCard({
         }
       }}
     >
-      <div
-        className={`relative overflow-hidden ${
-          item.category === "tiktok" || item.category === "reels"
-            ? "aspect-[9/16]"
-            : "aspect-video"
-        }`}
-      >
+      <div className="aspect-video relative overflow-hidden">
         <img
           src={item.posterSrc}
           alt={item.title}
@@ -97,20 +91,10 @@ function Lightbox({
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         exit={{ scale: 0.9, opacity: 0 }}
-        className={
-          item.category === "tiktok" || item.category === "reels"
-            ? "w-full max-w-sm"
-            : "w-full max-w-5xl"
-        }
+        className="w-full max-w-5xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div
-          className={`bg-black rounded-xl overflow-hidden ${
-            item.category === "tiktok" || item.category === "reels"
-              ? "aspect-[9/16] max-h-[80vh] mx-auto"
-              : "aspect-video"
-          }`}
-        >
+        <div className="aspect-video bg-black rounded-xl overflow-hidden">
           <video
             src={item.videoSrc}
             controls
