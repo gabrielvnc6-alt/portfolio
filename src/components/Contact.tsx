@@ -37,7 +37,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-12 md:py-16">
+    <section id="contact" className="py-20 md:py-24">
       <div className="max-w-4xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

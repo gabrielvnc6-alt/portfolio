@@ -10,7 +10,7 @@ export default function Pricing() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="pricing" className="py-12 md:py-16 border-y border-border">
+    <section id="pricing" className="py-20 md:py-24 border-y border-border">
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
