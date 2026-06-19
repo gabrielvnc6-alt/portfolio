@@ -9,6 +9,22 @@ import {
   type ScreenshotTestimonial,
 } from "@/data/testimonials";
 
+const avatarColors = [
+  "bg-rose-500/20 text-rose-300",
+  "bg-sky-500/20 text-sky-300",
+  "bg-emerald-500/20 text-emerald-300",
+  "bg-violet-500/20 text-violet-300",
+  "bg-amber-500/20 text-amber-300",
+  "bg-fuchsia-500/20 text-fuchsia-300",
+];
+
+function avatarColor(name: string) {
+  const hash = name
+    .split("")
+    .reduce((acc, char) => acc + char.charCodeAt(0), 0);
+  return avatarColors[hash % avatarColors.length];
+}
+
 function WrittenCard({
   item,
   index,
@@ -36,7 +52,7 @@ function WrittenCard({
         &ldquo;{item.quote}&rdquo;
       </p>
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent font-semibold text-sm">
+        <div className={`w-10 h-10 rounded-full ${avatarColor(item.name)} flex items-center justify-center font-semibold text-sm`}>
           {item.name
             .split(" ")
             .map((n) => n[0])
