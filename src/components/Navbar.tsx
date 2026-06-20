@@ -53,7 +53,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="text-sm font-medium bg-accent text-black px-5 py-2.5 rounded-full hover:bg-accent-hover transition-colors duration-200"
+            className="text-sm font-medium bg-brand text-white px-5 py-2.5 rounded-full hover:bg-brand-hover transition-colors duration-200"
           >
             Hire Me
           </a>
@@ -90,7 +90,7 @@ export default function Navbar() {
               <a
                 href="#contact"
                 onClick={() => setMobileOpen(false)}
-                className="text-lg font-medium bg-accent text-black px-5 py-3 rounded-full text-center hover:bg-accent-hover transition-colors mt-2"
+                className="text-lg font-medium bg-brand text-white px-5 py-3 rounded-full text-center hover:bg-brand-hover transition-colors mt-2"
               >
                 Hire Me
               </a>

@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0B1120;
-  --color-foreground: #F1F5F9;
-  --color-accent: #22D3EE;
-  --color-accent-hover: #06B6D4;
-  --color-muted: #94A3B8;
-  --color-card: #111A2E;
-  --color-card-hover: #16223B;
-  --color-border: #1E293B;
+  --color-background: #0E0A0A;
+  --color-foreground: #F6F4F2;
+  --color-accent: #F59E0B;
+  --color-accent-hover: #FB923C;
+  --color-brand: #B91C1C;
+  --color-brand-hover: #991B1B;
+  --color-muted: #A8A29E;
+  --color-card: #18100F;
+  --color-card-hover: #1F1614;
+  --color-border: #2A1D1B;
   --font-sans: var(--font-inter);
   --font-display: var(--font-display);
 }
@@ -18,7 +20,11 @@ html {
 }
 
 body {
-  background: var(--color-background);
+  background:
+    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(153, 27, 27, 0.22), transparent 60%),
+    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(153, 27, 27, 0.16), transparent 60%),
+    var(--color-background);
+  background-attachment: fixed;
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
@@ -51,6 +57,6 @@ body::before {
 
 /* Selection color */
 ::selection {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(245, 158, 11, 0.3);
   color: #fff;
 }

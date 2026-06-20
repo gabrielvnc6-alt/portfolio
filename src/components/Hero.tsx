@@ -61,7 +61,7 @@ export default function Hero() {
         >
           <a
             href="#portfolio"
-            className="inline-flex items-center justify-center bg-accent text-black font-semibold px-8 py-4 rounded-full text-base hover:bg-accent-hover transition-all duration-200 hover:scale-105"
+            className="inline-flex items-center justify-center bg-brand text-white font-semibold px-8 py-4 rounded-full text-base hover:bg-brand-hover transition-all duration-200 hover:scale-105"
           >
             View My Work
           </a>

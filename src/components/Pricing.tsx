@@ -71,7 +71,7 @@ export default function Pricing() {
                 href="#contact"
                 className={`block text-center py-3 rounded-full font-semibold text-sm transition-all duration-200 ${
                   tier.highlighted
-                    ? "bg-accent text-black hover:bg-accent-hover"
+                    ? "bg-brand text-white hover:bg-brand-hover"
                     : "bg-white/5 border border-border text-foreground hover:bg-white/10"
                 }`}
               >
