@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #0E0A0A;
-  --color-foreground: #F6F4F2;
-  --color-accent: #F59E0B;
-  --color-accent-hover: #FB923C;
-  --color-brand: #B91C1C;
-  --color-brand-hover: #991B1B;
-  --color-muted: #A8A29E;
-  --color-card: #18100F;
-  --color-card-hover: #1F1614;
-  --color-border: #2A1D1B;
+  --color-background: #FAFAF8;
+  --color-foreground: #141414;
+  --color-accent: #1A1A1A;
+  --color-accent-hover: #000000;
+  --color-brand: #141414;
+  --color-brand-hover: #000000;
+  --color-muted: #6B6B68;
+  --color-card: #FFFFFF;
+  --color-card-hover: #F4F4F1;
+  --color-border: #E6E4DF;
   --font-sans: var(--font-inter);
   --font-display: var(--font-display);
 }
@@ -20,11 +20,7 @@ html {
 }
 
 body {
-  background:
-    radial-gradient(ellipse 70% 50% at 0% 0%, rgba(153, 27, 27, 0.22), transparent 60%),
-    radial-gradient(ellipse 70% 50% at 100% 0%, rgba(153, 27, 27, 0.16), transparent 60%),
-    var(--color-background);
-  background-attachment: fixed;
+  background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
@@ -37,7 +33,7 @@ body::before {
   inset: 0;
   z-index: 9999;
   pointer-events: none;
-  opacity: 0.03;
+  opacity: 0.015;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px 256px;
@@ -51,12 +47,12 @@ body::before {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  background: #CFCFCB;
   border-radius: 3px;
 }
 
 /* Selection color */
 ::selection {
-  background: rgba(245, 158, 11, 0.3);
-  color: #fff;
+  background: #141414;
+  color: #FAFAF8;
 }

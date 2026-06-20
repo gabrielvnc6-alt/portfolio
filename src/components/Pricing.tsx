@@ -43,7 +43,7 @@ export default function Pricing() {
               }`}
             >
               {tier.highlighted && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-black text-xs font-bold px-4 py-1 rounded-full">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold px-4 py-1 rounded-full">
                   Most Popular
                 </span>
               )}
@@ -72,7 +72,7 @@ export default function Pricing() {
                 className={`block text-center py-3 rounded-full font-semibold text-sm transition-all duration-200 ${
                   tier.highlighted
                     ? "bg-brand text-white hover:bg-brand-hover"
-                    : "bg-white/5 border border-border text-foreground hover:bg-white/10"
+                    : "bg-card border border-border text-foreground hover:bg-card-hover"
                 }`}
               >
                 {tier.cta}

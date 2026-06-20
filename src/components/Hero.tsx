@@ -18,7 +18,7 @@ export default function Hero() {
         >
           <source src="/videos/showreel.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/70 via-[#0A0A0A]/50 to-[#0A0A0A]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FAFAF8]/60 via-[#FAFAF8]/75 to-[#FAFAF8]" />
       </div>
 
       {/* Content */}
@@ -67,7 +67,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
-            className="inline-flex items-center justify-center border border-white/20 text-foreground font-semibold px-8 py-4 rounded-full text-base hover:bg-white/5 transition-all duration-200"
+            className="inline-flex items-center justify-center border border-black/15 text-foreground font-semibold px-8 py-4 rounded-full text-base hover:bg-black/[0.04] transition-all duration-200"
           >
             Hire Me
           </a>

@@ -50,7 +50,7 @@ function VideoCard({
         />
         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
           <div className="w-14 h-14 rounded-full bg-accent/90 flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all duration-300">
-            <Play size={24} className="text-black ml-1" fill="black" />
+            <Play size={24} className="text-white ml-1" fill="white" />
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@ export default function Portfolio() {
                 onClick={() => setFilter(cat.value)}
                 className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
                   filter === cat.value
-                    ? "bg-accent text-black"
+                    ? "bg-accent text-white"
                     : "bg-card border border-border text-muted hover:text-foreground hover:border-white/20"
                 }`}
               >
