@@ -77,7 +77,7 @@ function AnimatedCounter({
 
 export default function TrustStrip() {
   return (
-    <section id="trust" className="py-20 md:py-24 border-y border-border">
+    <section id="trust" className="py-12 md:py-16 border-y border-border">
       {/* Logo marquee */}
       <div className="relative overflow-hidden mb-16">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-background to-transparent z-10" />
