@@ -40,7 +40,7 @@ export default function Hero() {
         >
           I edit videos
           <br />
-          <span className="text-accent">that get watched.</span>
+          <span className="text-muted">that get watched.</span>
         </motion.h1>
 
         <motion.p
