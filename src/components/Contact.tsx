@@ -1,40 +1,38 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState, type FormEvent } from "react";
-import { Send, MapPin } from "lucide-react";
+import { useRef } from "react";
+import { MapPin, ArrowUpRight } from "lucide-react";
 
-const projectTypes = [
-  "Short-Form Video (TikTok/Reels)",
-  "YouTube Long-Form",
-  "Thumbnail Design",
-  "Content Strategy",
-  "Full Package",
-  "Other",
-];
+const INSTAGRAM_DM = "https://ig.me/m/gabriel1carvalhoo";
+const INSTAGRAM_PROFILE = "https://www.instagram.com/gabriel1carvalhoo";
+const HANDLE = "@gabriel1carvalhoo";
+const IG_GRADIENT =
+  "linear-gradient(45deg, #feda75 0%, #fa7e1e 25%, #d62976 50%, #962fbf 75%, #4f5bd5 100%)";
+
+function InstagramGlyph({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+    </svg>
+  );
+}
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [submitted, setSubmitted] = useState(false);
-
-  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-    } catch {
-      // silently handle
-    }
-
-    setSubmitted(true);
-  }
 
   return (
     <section id="contact" className="py-20 md:py-24">
@@ -43,7 +41,7 @@ export default function Contact() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
           <p className="text-accent text-sm font-medium tracking-widest uppercase mb-4">
             Let&apos;s Work Together
@@ -51,115 +49,89 @@ export default function Contact() {
           <h2 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Let&apos;s make something
             <br />
-            <span className="text-accent">that gets watched.</span>
+            <span className="text-muted">that gets watched.</span>
           </h2>
+          <p className="text-muted mt-5 max-w-md mx-auto">
+            No long forms. Just slide into my DMs on Instagram and tell me about
+            your project.
+          </p>
         </motion.div>
 
+        {/* Instagram DM card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
+          className="max-w-xl mx-auto"
         >
-          {submitted ? (
-            <div className="text-center py-16 bg-card border border-border rounded-2xl">
-              <div className="w-16 h-16 rounded-full bg-accent/20 text-accent flex items-center justify-center mx-auto mb-4">
-                <Send size={28} />
-              </div>
-              <h3 className="font-[family-name:var(--font-display)] text-2xl font-bold mb-2">
-                Message Sent!
-              </h3>
-              <p className="text-muted">
-                I&apos;ll get back to you within 24 hours.
-              </p>
-            </div>
-          ) : (
-            <form
-              onSubmit={handleSubmit}
-              className="bg-card border border-border rounded-2xl p-8 md:p-10 space-y-6"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder="Your name"
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder="you@email.com"
-                    className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent/50 transition-colors"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Project Type
-                </label>
-                <select
-                  name="projectType"
-                  required
-                  className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground focus:outline-none focus:border-accent/50 transition-colors appearance-none"
-                >
-                  <option value="">Select a project type</option>
-                  {projectTypes.map((type) => (
-                    <option key={type} value={type}>
-                      {type}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  name="message"
-                  required
-                  rows={5}
-                  placeholder="Tell me about your project, goals, and timeline..."
-                  className="w-full bg-background border border-border rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-muted/50 focus:outline-none focus:border-accent/50 transition-colors resize-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-brand text-white font-semibold py-4 rounded-full text-base hover:bg-brand-hover transition-all duration-200 hover:scale-[1.02]"
+          <div className="bg-card border border-border rounded-3xl p-6 md:p-8 shadow-[0_8px_30px_rgba(0,0,0,0.06)]">
+            {/* Profile header */}
+            <div className="flex items-center gap-3 pb-5 border-b border-border">
+              <span
+                className="w-11 h-11 rounded-2xl flex items-center justify-center text-white shrink-0"
+                style={{ background: IG_GRADIENT }}
               >
-                Send Message
-              </button>
-            </form>
-          )}
-        </motion.div>
+                <InstagramGlyph />
+              </span>
+              <div className="min-w-0">
+                <p className="font-semibold text-sm leading-tight">Gabriel</p>
+                <p className="text-muted text-xs truncate">{HANDLE}</p>
+              </div>
+              <span className="ml-auto flex items-center gap-2 text-muted text-xs">
+                <span className="w-2 h-2 rounded-full bg-emerald-500" />
+                Replies in a few hours
+              </span>
+            </div>
 
-        {/* Social links & location */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex flex-col items-center gap-6 mt-12"
-        >
-          <div className="flex items-center gap-5">
+            {/* Conversation */}
+            <div className="py-6 space-y-3">
+              <div className="flex justify-start">
+                <p className="max-w-[80%] rounded-2xl rounded-bl-md bg-background border border-border px-4 py-2.5 text-sm text-foreground/90">
+                  Hi Gabriel! 👋 I want short-form edits that actually get
+                  watched.
+                </p>
+              </div>
+              <div className="flex justify-end">
+                <p className="max-w-[80%] rounded-2xl rounded-br-md bg-foreground text-background px-4 py-2.5 text-sm">
+                  Say less. Send me the details — let&apos;s make it. 🎬
+                </p>
+              </div>
+            </div>
+
+            {/* Primary CTA */}
             <a
-              href="https://www.instagram.com/gabriel1carvalhoo"
+              href={INSTAGRAM_DM}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-11 h-11 rounded-full bg-card border border-border flex items-center justify-center text-muted hover:text-accent hover:border-accent/30 transition-all duration-200"
-              aria-label="Instagram"
+              aria-label="Send me a direct message on Instagram"
+              className="group flex items-center justify-center gap-2.5 w-full rounded-full py-4 px-6 text-white font-semibold text-base transition-transform duration-200 hover:scale-[1.02] shadow-[0_10px_30px_rgba(214,41,118,0.35)]"
+              style={{ background: IG_GRADIENT }}
             >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              <InstagramGlyph className="w-5 h-5" />
+              Message me on Instagram
+              <ArrowUpRight
+                size={18}
+                className="transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
             </a>
           </div>
-          <p className="flex items-center gap-2 text-muted text-sm">
-            <MapPin size={14} />
-            Based in Lisbon, working worldwide
-          </p>
+
+          {/* Footer line */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-x-6 gap-y-2 mt-8 text-muted text-sm">
+            <a
+              href={INSTAGRAM_PROFILE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-foreground transition-colors"
+            >
+              Or view my profile {HANDLE}
+            </a>
+            <span className="hidden sm:block text-border">•</span>
+            <span className="flex items-center gap-2">
+              <MapPin size={14} />
+              Based in Lisbon, working worldwide
+            </span>
+          </div>
         </motion.div>
       </div>
     </section>
