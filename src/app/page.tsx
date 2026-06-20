@@ -4,7 +4,6 @@ import TrustStrip from "@/components/TrustStrip";
 import Portfolio from "@/components/Portfolio";
 import Results from "@/components/Results";
 import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -18,7 +17,6 @@ export default function Home() {
         <Portfolio />
         <Results />
         <Testimonials />
-        <Pricing />
         <Contact />
       </main>
       <Footer />

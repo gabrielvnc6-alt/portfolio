@@ -9,8 +9,8 @@ export default function Footer() {
           <a href="#portfolio" className="text-muted text-xs hover:text-foreground transition-colors">
             Work
           </a>
-          <a href="#pricing" className="text-muted text-xs hover:text-foreground transition-colors">
-            Pricing
+          <a href="#testimonials" className="text-muted text-xs hover:text-foreground transition-colors">
+            Testimonials
           </a>
           <a href="#contact" className="text-muted text-xs hover:text-foreground transition-colors">
             Contact
