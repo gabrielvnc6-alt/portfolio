@@ -18,7 +18,7 @@ export default function Hero() {
         >
           <source src="/videos/showreel.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FAFAF8]/60 via-[#FAFAF8]/75 to-[#FAFAF8]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F1F0EB]/60 via-[#F1F0EB]/75 to-[#F1F0EB]" />
       </div>
 
       {/* Content */}

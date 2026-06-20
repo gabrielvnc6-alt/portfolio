@@ -10,12 +10,12 @@ import {
 } from "@/data/testimonials";
 
 const avatarColors = [
-  "bg-rose-500/20 text-rose-300",
-  "bg-sky-500/20 text-sky-300",
-  "bg-emerald-500/20 text-emerald-300",
-  "bg-violet-500/20 text-violet-300",
-  "bg-amber-500/20 text-amber-300",
-  "bg-fuchsia-500/20 text-fuchsia-300",
+  "bg-rose-500/12 text-rose-600",
+  "bg-sky-500/12 text-sky-600",
+  "bg-emerald-500/12 text-emerald-600",
+  "bg-violet-500/12 text-violet-600",
+  "bg-amber-500/12 text-amber-600",
+  "bg-fuchsia-500/12 text-fuchsia-600",
 ];
 
 function avatarColor(name: string) {

@@ -57,7 +57,7 @@ export const testimonials: Testimonial[] = [
     id: "w5",
     name: "marcusdev",
     role: "Content creator — UK",
-    avatarColor: "bg-emerald-500/20 text-emerald-300",
+    avatarColor: "bg-emerald-500/12 text-emerald-600",
     quote:
       "Fast turnaround and the edits hit exactly the vibe I was going for. The captions and pacing made my Reels feel way more professional. Will be ordering again.",
   },
@@ -66,7 +66,7 @@ export const testimonials: Testimonial[] = [
     id: "w6",
     name: "sofiacreates",
     role: "Brand owner — Spain",
-    avatarColor: "bg-violet-500/20 text-violet-300",
+    avatarColor: "bg-violet-500/12 text-violet-600",
     quote:
       "Super easy to work with and really understood my brand. My TikToks have never looked this clean. Highly recommend for anyone serious about short-form content.",
   },

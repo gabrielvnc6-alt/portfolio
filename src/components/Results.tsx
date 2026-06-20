@@ -150,7 +150,7 @@ export default function Results() {
                       className={`h-2 rounded-full transition-all duration-200 ${
                         i === index
                           ? "w-6 bg-accent"
-                          : "w-2 bg-border hover:bg-white/30"
+                          : "w-2 bg-border hover:bg-black/20"
                       }`}
                     />
                   ))}
